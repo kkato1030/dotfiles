@@ -1,0 +1,3 @@
+[submodule "Iceberg-iTerm2"]
+	path = Iceberg-iTerm2
+	url = git@github.com:Arc0re/Iceberg-iTerm2.git
