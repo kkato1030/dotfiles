@@ -29,4 +29,4 @@ brew tap kkato1030/tap
 brew install kkato1030/tap/al
 
 # Application のインストール (core のみ)
-al sync --core
+AL_HOME="$SCRIPT_DIR/al" al sync --core
