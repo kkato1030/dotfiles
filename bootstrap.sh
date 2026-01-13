@@ -19,7 +19,10 @@ ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 vim -Nu ~/.vim/vimrc -n -es +'qa'
 
 # Homebrew のインストール: https://brew.sh/
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! brew --version 2>/dev/null; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # al のインストール: https://github.com/kkato1030/al
 brew tap kkato1030/tap
