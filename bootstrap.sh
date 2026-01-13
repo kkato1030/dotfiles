@@ -8,12 +8,21 @@ mkdir -p ~/Workspace/{doodle,github.com}
 mkdir -p ~/.config/{al,ghostty}
 
 # Link 設定
+## Zsh
 ln -sf "$SCRIPT_DIR"/zsh/.zshrc ~/.zshrc
 ln -sf "$SCRIPT_DIR"/zsh/.zprofile ~/.zprofile
 ln -sf "$SCRIPT_DIR"/zsh/.zsh_aliases ~/.zsh_aliases
 ln -sf "$SCRIPT_DIR"/zsh/.zsh_functions ~/.zsh_functions
+
+## Vim
 ln -sf "$SCRIPT_DIR"/vim ~/.vim
+
+## Ghostty
 ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
+
+## Git
+ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
+ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
 
 # Vim のセットアップ
 vim -Nu ~/.vim/vimrc -n -es +'qa'

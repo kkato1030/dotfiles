@@ -1,0 +1,21 @@
+[core]
+  excludesfile = ~/.gitignore
+
+[ghq]
+	root = ~/WorkSpace
+
+[user]
+	email = kakato1030@gmail.com
+	name  = kakato
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[alias]
+	br   = branch
+	co   = checkout
+	ss   = status
+	logo = log --oneline -20
+
+[init]
+	defaultBranch = main
