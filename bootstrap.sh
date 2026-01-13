@@ -5,7 +5,7 @@ SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 
 # Workspace ディレクトリをセットアップ
 mkdir -p ~/Workspace/{doodle,github.com}
-mkdir -p ~/.config/{al,ghostty}
+mkdir -p ~/.config
 
 # Link 設定
 ## Zsh
