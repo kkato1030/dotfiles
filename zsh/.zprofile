@@ -20,7 +20,9 @@ eval "$($HOMEBREW_BIN/mise activate zsh)"
 
 # -----------------
 # completions
+autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+complete -C aws_completer aws
 
 # -----------------
 # load zshrc

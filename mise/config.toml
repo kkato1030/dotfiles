@@ -1,0 +1,11 @@
+[settings]
+experimental = true # enable experimental features
+
+[tools]
+aws-cli = { version = "latest", symlink_bins = "true" }
+deno = "latest"
+go = "latest"
+java = "latest"
+node = "latest"
+python = "latest"
+terraform = "latest"

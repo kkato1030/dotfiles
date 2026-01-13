@@ -20,6 +20,9 @@ test -L ~/.vim || ln -sf "$SCRIPT_DIR"/vim ~/.vim
 ## Ghostty
 test -L ~/.config/ghostty || ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 
+## mise
+test -L ~/.config/mise || ln -sf "$SCRIPT_DIR"/mise ~/.config/mise
+
 ## Git
 test -L ~/.gitconfig || ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
 test -L ~/.gitignore || ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
@@ -41,3 +44,6 @@ fi
 
 # Application のインストール (core のみ)
 AL_HOME="$SCRIPT_DIR/al" al sync --core
+
+# language/tools のインストール
+mise install
