@@ -1,0 +1,32 @@
+" default settings
+set fenc=utf-8   " ファイルの文字コードを UTF-8 に設定
+set number       " 行番号を表示
+set cursorline   " カーソル行をハイライト
+set cursorcolumn " カーソル列をハイライト
+set smartindent  " インデントを自動調整
+set showmatch    " 括弧の対応をハイライト
+set title        " タイトルを表示
+set expandtab    " タブをスペースに変換
+set tabstop=2    " タブの幅を2に設定 
+set shiftwidth=2 " インデントの幅を2に設定
+
+" plugin manager (vim-jetpack
+let s:jetpackfile = expand('<sfile>:p:h') .. '/pack/jetpack/opt/vim-jetpack/plugin/jetpack.vim'
+let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
+if !filereadable(s:jetpackfile)
+  call system(printf('curl -fsSLo %s --create-dirs %s', s:jetpackfile, s:jetpackurl))
+endif
+
+execute 'source ' . expand('~/.vim/config/jetpack.vim')
+
+
+" theme/syntax
+syntax on
+colorscheme iceberg
+
+" file
+filetype plugin on
+
+" setting files
+execute 'source ' . expand('~/.vim/config/keymapping.vim')
+execute 'source ' . expand('~/.vim/config/netrw.vim')

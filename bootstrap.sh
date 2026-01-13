@@ -12,6 +12,9 @@ ln -sf "$DOTFILES_PATH"/zsh/.zsh_aliases ~/.zsh_aliases
 ln -sf "$DOTFILES_PATH"/zsh/.zsh_functions ~/.zsh_functions
 ln -sf "$DOTFILES_PATH"/vim ~/.vim
 
+# Vim のセットアップ
+vim -Nu ~/.vim/vimrc -n -es +'qa'
+
 # Homebrew のインストール: https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
