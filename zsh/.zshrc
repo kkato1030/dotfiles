@@ -11,7 +11,7 @@ done
 # aliases
 
 ALIASES_PATH="$HOME/.zsh_aliases"
-find "$ALIASES_PATH" -type f -name '*.zsh' | while read file_path; do
+find "$ALIASES_PATH" -follow -type f -name '*.zsh' | while read file_path; do
 	. "$file_path"
 done
 
