@@ -1,2 +1,15 @@
 # theme
 theme = Iceberg Dark
+
+# settings
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
+wait-after-command = true
+
+window-padding-x = 5
+window-padding-balance = true
+
+quick-terminal-animation-duration = 0.1
+keybind = "global:cmd+shift+t=toggle_quick_terminal"
