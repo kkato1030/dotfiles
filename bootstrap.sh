@@ -45,5 +45,9 @@ fi
 # Application のインストール (core のみ)
 AL_HOME="$SCRIPT_DIR/al" al sync --core
 
-# language/tools のインストール
+# Language/Tools のインストール
 mise install
+
+# Dock のカスタマイズ
+dockutil --remove all
+defaults write com.apple.dock autohide -bool true && killall Dock
