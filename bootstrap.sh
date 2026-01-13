@@ -9,20 +9,20 @@ mkdir -p ~/.config/{al,ghostty}
 
 # Link 設定
 ## Zsh
-ln -sf "$SCRIPT_DIR"/zsh/.zshrc ~/.zshrc
-ln -sf "$SCRIPT_DIR"/zsh/.zprofile ~/.zprofile
-ln -sf "$SCRIPT_DIR"/zsh/.zsh_aliases ~/.zsh_aliases
-ln -sf "$SCRIPT_DIR"/zsh/.zsh_functions ~/.zsh_functions
+test -L ~/.zshrc || ln -sf "$SCRIPT_DIR"/zsh/.zshrc ~/.zshrc
+test -L ~/.zprofile || ln -sf "$SCRIPT_DIR"/zsh/.zprofile ~/.zprofile
+test -L ~/.zsh_aliases || ln -sf "$SCRIPT_DIR"/zsh/.zsh_aliases ~/.zsh_aliases
+test -L ~/.zsh_functions || ln -sf "$SCRIPT_DIR"/zsh/.zsh_functions ~/.zsh_functions
 
 ## Vim
-ln -sf "$SCRIPT_DIR"/vim ~/.vim
+test -L ~/.vim || ln -sf "$SCRIPT_DIR"/vim ~/.vim
 
 ## Ghostty
-ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
+test -L ~/.config/ghostty || ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 
 ## Git
-ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
-ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
+test -L ~/.gitconfig || ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
+test -L ~/.gitignore || ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
 
 # Vim のセットアップ
 vim -Nu ~/.vim/vimrc -n -es +'qa'
