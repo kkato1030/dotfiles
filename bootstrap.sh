@@ -19,14 +19,16 @@ ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 vim -Nu ~/.vim/vimrc -n -es +'qa'
 
 # Homebrew のインストール: https://brew.sh/
-if ! brew --version 2>/dev/null; then
+if ! brew --version >/dev/null 2>&1; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # al のインストール: https://github.com/kkato1030/al
-brew tap kkato1030/tap
-brew install kkato1030/tap/al
+if ! al --version >/dev/null 2>&1; then
+	brew tap kkato1030/tap
+	brew install kkato1030/tap/al
+fi
 
 # Application のインストール (core のみ)
 AL_HOME="$SCRIPT_DIR/al" al sync --core
