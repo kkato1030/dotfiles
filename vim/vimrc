@@ -10,7 +10,7 @@ set expandtab    " タブをスペースに変換
 set tabstop=2    " タブの幅を2に設定 
 set shiftwidth=2 " インデントの幅を2に設定
 
-" plugin manager (vim-jetpack
+" plugin manager (vim-jetpack)
 let s:jetpackfile = expand('<sfile>:p:h') .. '/pack/jetpack/opt/vim-jetpack/plugin/jetpack.vim'
 let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
 if !filereadable(s:jetpackfile)
@@ -18,7 +18,6 @@ if !filereadable(s:jetpackfile)
 endif
 
 execute 'source ' . expand('~/.vim/config/jetpack.vim')
-
 
 " theme/syntax
 syntax on
