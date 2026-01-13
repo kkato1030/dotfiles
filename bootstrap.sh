@@ -1,15 +1,16 @@
 #!/bin/bash
 set -eu
 
-# Workspace
-mkdir -p ~/Workspace
-mkdir -p ~/Workspace/doodle
+# Workspace ディレクトリをセットアップ
+mkdir -p ~/Workspace/{doodle,github.com}
+mkdir -p ~/.config/{ghostty,al}
 
-# link
-ln -sf ~/.dotfiles/.zshrc ~/.zshrc
-ln -sf ~/.dotfiles/.zprofile ~/.zprofile
-ln -sf ~/.dotfiles/.zsh_aliases ~/.zsh_aliases
-ln -sf ~/.dotfiles/.zsh_functions ~/.zsh_functions
+# Link 設定
+ln -sf "$DOTFILES_PATH"/zsh/.zshrc ~/.zshrc
+ln -sf "$DOTFILES_PATH"/zsh/.zprofile ~/.zprofile
+ln -sf "$DOTFILES_PATH"/zsh/.zsh_aliases ~/.zsh_aliases
+ln -sf "$DOTFILES_PATH"/zsh/.zsh_functions ~/.zsh_functions
+ln -sf "$DOTFILES_PATH"/vim ~/.vim
 
 # Homebrew のインストール: https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -17,3 +18,6 @@ ln -sf ~/.dotfiles/.zsh_functions ~/.zsh_functions
 # al のインストール: https://github.com/kkato1030/al
 brew tap kkato1030/tap
 brew install kkato1030/tap/al
+
+# Application のインストール (core のみ)
+al sync --core

@@ -1,18 +1,21 @@
 # -----------------
 # vars
 
+export DOTFILES_PATH=$HOME/.dotfiles
 export WORKSPACE=$HOME/Workspace
 export EDITOR=vim
 
 # -----------------
 # cli-tools setup
 
+HOMEBREW_BIN=/opt/homebrew/bin
+
 # al/brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(/Users/kakato/Workspace/github.com/kkato1030/al/al hook zsh)"
+eval "$($HOMEBREW_BIN/brew shellenv)"
+eval "$($HOMEBREW_BIN/al hook zsh)"
 
 # mise
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+eval "$($HOMEBREW_BIN/mise activate zsh)"
 
 # -----------------
 # completions
