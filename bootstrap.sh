@@ -23,6 +23,9 @@ test -L ~/.config/ghostty || ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 ## mise
 test -L ~/.config/mise || ln -sf "$SCRIPT_DIR"/mise ~/.config/mise
 
+## peco
+test -L ~/.config/peco || ln -sf "$SCRIPT_DIR"/peco ~/.config/peco
+
 ## Git
 test -L ~/.gitconfig || ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
 test -L ~/.gitignore || ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
@@ -40,6 +43,7 @@ fi
 if ! al --version >/dev/null 2>&1; then
 	brew tap kkato1030/tap
 	brew install kkato1030/tap/al
+  al completion zsh > "${fpath[1]}/_al"
 fi
 
 # Application のインストール (core のみ)
