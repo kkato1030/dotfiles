@@ -2,6 +2,7 @@
 # vars
 
 export DOTFILES_PATH=$HOME/.dotfiles
+export AL_HOME=$DOTFILES_PATH/al
 export WORKSPACE=$HOME/Workspace
 export EDITOR=vim
 
