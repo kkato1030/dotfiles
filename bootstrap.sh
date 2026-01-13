@@ -1,17 +1,19 @@
 #!/bin/bash
 set -eu
 
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+
 # Workspace ディレクトリをセットアップ
 mkdir -p ~/Workspace/{doodle,github.com}
 mkdir -p ~/.config/{al,ghostty}
 
 # Link 設定
-ln -sf "$DOTFILES_PATH"/zsh/.zshrc ~/.zshrc
-ln -sf "$DOTFILES_PATH"/zsh/.zprofile ~/.zprofile
-ln -sf "$DOTFILES_PATH"/zsh/.zsh_aliases ~/.zsh_aliases
-ln -sf "$DOTFILES_PATH"/zsh/.zsh_functions ~/.zsh_functions
-ln -sf "$DOTFILES_PATH"/vim ~/.vim
-ln -sf "$DOTFILES_PATH"/ghostty ~/.config/ghostty
+ln -sf "$SCRIPT_DIR"/zsh/.zshrc ~/.zshrc
+ln -sf "$SCRIPT_DIR"/zsh/.zprofile ~/.zprofile
+ln -sf "$SCRIPT_DIR"/zsh/.zsh_aliases ~/.zsh_aliases
+ln -sf "$SCRIPT_DIR"/zsh/.zsh_functions ~/.zsh_functions
+ln -sf "$SCRIPT_DIR"/vim ~/.vim
+ln -sf "$SCRIPT_DIR"/ghostty ~/.config/ghostty
 
 # Vim のセットアップ
 vim -Nu ~/.vim/vimrc -n -es +'qa'
