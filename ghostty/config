@@ -12,4 +12,4 @@ window-padding-x = 5
 window-padding-balance = true
 
 quick-terminal-animation-duration = 0.1
-keybind = "global:cmd+shift+t=toggle_quick_terminal"
+keybind = "global:cmd+backquote=toggle_quick_terminal"
