@@ -26,9 +26,16 @@ test -L ~/.config/mise || ln -sf "$SCRIPT_DIR"/mise ~/.config/mise
 ## peco
 test -L ~/.config/peco || ln -sf "$SCRIPT_DIR"/peco ~/.config/peco
 
+## jj
+test -L ~/.config/jj || ln -sf "$SCRIPT_DIR"/jj ~/.config/jj
+
+## al
+test -L ~/.config/al || ln -sf "$SCRIPT_DIR"/al ~/.config/al
+
 ## Git
 test -L ~/.gitconfig || ln -sf "$SCRIPT_DIR"/git/.gitconfig ~/.gitconfig
 test -L ~/.gitignore || ln -sf "$SCRIPT_DIR"/git/.gitignore ~/.gitignore
+
 
 # Vim のセットアップ
 vim -Nu ~/.vim/vimrc -n -es +'qa'
