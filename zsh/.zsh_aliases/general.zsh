@@ -1,3 +1,5 @@
 alias ll='ls -l'
 alias code='cursor'
 alias cdw='cd $(ghq root)/$(ghq list | peco)'
+alias codew='code $(ghq root)/$(ghq list | peco)'
+alias reload='exec $SHELL -l'
